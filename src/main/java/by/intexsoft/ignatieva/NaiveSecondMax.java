@@ -25,6 +25,9 @@ public class NaiveSecondMax {
                     max = array[index];
                     secondMax = array[index + 1];
                 }
+                if (max == array[index] && secondMax == array[index]) {
+                    secondMax = array[index + 1];
+                }
             }
             if (array[index] < array[index + 1]) {
                 if (max < array[index + 1] && max >= array[index]) {
@@ -41,7 +44,11 @@ public class NaiveSecondMax {
                 if (max < array[index] && max == secondMax) {
                     max = array[index];
                     secondMax = array[index];
-                    index++;
+                }
+                if (max < array[index] && max != secondMax) {
+                    int temp = max;
+                    max = array[index];
+                    secondMax = temp;
                 }
             }
             index++;
