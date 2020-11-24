@@ -5,13 +5,12 @@ public class NaiveSecondMax {
         int max = array[0];
         int secondMax = array[1];
         for (int index = 2; index < array.length; index++) {
+            int temp = max;
             if (max < secondMax) {
-                int temp = max;
                 max = secondMax;
                 secondMax = temp;
             }
             if (max < array[index]) {
-                int temp = max;
                 max = array[index];
                 secondMax = temp;
             }
