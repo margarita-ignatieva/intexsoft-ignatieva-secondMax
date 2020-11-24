@@ -13,5 +13,6 @@ public class Application {
         System.out.println(NaiveSecondMax.findSecondMax(new int[]{111, 111, 111, 10, 89}));
         System.out.println(NaiveSecondMax.findSecondMax(new int[]{120, 6, 122, 1, 19122, 122}));
         System.out.println(NaiveSecondMax.findSecondMax(new int[]{120, 6, 122, 19122, 1, 6, 120, 19122, 122,122}));
+        System.out.println(StreamSecondMax.findSecondMax(new int[]{120, 6, 122, 19122, 1, 6, 120, 19122, 122,122}));
     }
 }
