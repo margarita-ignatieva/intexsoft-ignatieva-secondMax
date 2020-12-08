@@ -13,12 +13,15 @@ public class NaiveSecondMax {
         if (array.length == 1) {
             return array[0];
         }
+        int step  = 0;
         for (int element : array) {
-            if (max <= element) {
-                int temp = max;
+            if (max < element) {
+                secondMax = max;
                 max = element;
-                secondMax = temp;
-            } else if (secondMax < element || secondMax == max){
+            } else if (secondMax < element && element != max){
+                secondMax = element;
+            }
+            if (++step == array.length && secondMax == Integer.MIN_VALUE) {
                 secondMax = element;
             }
         }
